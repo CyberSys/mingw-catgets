@@ -11,7 +11,7 @@
  * the prototypes for the functions used to implement `gencat'.
  *
  * Written by Keith Marshall  <keithmarshall@users.sourceforge.net>
- * Last modification: 27-Mar-2007
+ * Last modification: 12-May-2007
  *
  *
  * This is free software.  It is provided AS IS, in the hope that it may
@@ -89,10 +89,11 @@ extern struct msgdict *mc_merge( struct msgdict *, struct msgdict * );
 extern char *map_codeset( iconv_t *, char *, char * );
 extern size_t iconv_wrap( int, iconv_t, char *, size_t, char *, size_t );
 
+#define msgarg(MSG) catgets( gencat_messages, MSG )
 #define errmsg(MSG) stderr, catgets( gencat_messages, MSG )
 #define FATAL(MSG) input, linenum, catgets( gencat_messages, MSG )
 
 #define GENCAT_MSG_SRC(REF)  progname, (REF)->src, (REF)->lineno
 #define GENCAT_MSG_INPUT     GENCAT_MSG_SRC( input )
 
-#endif /* !defined( GENCAT_H ): $RCSfile$Revision$: end of file */
+#endif /* !defined( GENCAT_H ): $RCSfile$Revision: 1.1.1.1 $: end of file */
