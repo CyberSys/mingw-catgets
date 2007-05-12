@@ -49,7 +49,6 @@
 #define MSG_MSGNUM_NOT_INCR  2, 6, "invalid message number: expecting > %d; got %d\n"
 #define MSG_REDEFINED        2, 7, "%s: %s:%u: redefinition of message %u in set %u\n"
 #define MSG_PREVIOUS_HERE    2, 8, "%s: %s:%u: previous definition was here\n"
-#define MSG_DEL_UNSUPPORTED  3, 1, "%s: %s:%u: `delset' operation not yet supported\n"
 #define MSG_EOF_IN_QUOTES    3, 2, "%s:%u: unexpected EOF encountered before closing quote\n"
 #define MSG_TEXT_DISCARDED   3, 3, "%s:%u: incomplete message marked for deletion\n"
 #define MSG_MISSING_NEWLINE  3, 4, "%s:%u: missing newline at end of file\n"
@@ -57,4 +56,4 @@
 /* !
  * !$ end of file
  */
-#endif /* !defined( GCMSGS_H ): $RCSfile$Revision: 1.1.1.1 $: end of file */
+#endif /* !defined( GCMSGS_H ): $RCSfile$Revision: 1.2 $: end of file */
