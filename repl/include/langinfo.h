@@ -27,10 +27,10 @@
  */
 #define _LANGINFO_H_
 
-/* All the headers include this file. */
-#include <_mingw.h>
+#include <_mingw.h>     /* All MinGW headers include this.       */
 
-#include <nl_types.h>
+#include <locale.h>     /* Need this for LC_CTYPE and friends... */
+#include <nl_types.h>   /* and this for nl_item                  */
 
 #define __NL_ITEM( CATEGORY, INDEX )  ((CATEGORY << 16) | INDEX)
 
@@ -68,4 +68,4 @@ enum {
  */
 extern char __cdecl *nl_langinfo( nl_item );
 
-#endif /* _LANGINFO_H_: $RCSfile$Revision$: end of file */
+#endif /* _LANGINFO_H_: $RCSfile$Revision: 1.1.1.1 $: end of file */
