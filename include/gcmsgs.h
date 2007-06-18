@@ -44,7 +44,7 @@
 #define MSG_BAD_CATALOGUE    2, 1, "%s: %s: file is not a valid message catalogue\n"
 #define MSG_UNKNOWN_CODESET  2, 2, "%s: %s: unknown codeset descriptor\n"
 #define MSG_CODESET_CLASH    2, 3, "%s:%u: codeset `%s' conflicts with prior declaration\n"
-#define MSG_HAD_CODESET      2, 4, "%s:%u: codeset `%s' was previously declared here\n"
+#define MSG_HAD_CODESET      2, 4, "%s:%u: codeset `%s' previously declared here\n"
 #define MSG_SETNUM_NOT_INCR  2, 5, "invalid set number: expecting > %d; got %d\n"
 #define MSG_MSGNUM_NOT_INCR  2, 6, "invalid message number: expecting > %d; got %d\n"
 #define MSG_REDEFINED        2, 7, "%s: %s:%u: redefinition of message %u in set %u\n"
@@ -53,7 +53,11 @@
 #define MSG_TEXT_DISCARDED   3, 3, "%s:%u: incomplete message marked for deletion\n"
 #define MSG_MISSING_NEWLINE  3, 4, "%s:%u: missing newline at end of file\n"
 #define MSG_BAD_INDEX        3, 5, "invalid reference in message index"
+#define MSG_UTF_UNKNOWN      4, 1, "%s:unrecognisable encoding format\n"
+#define MSG_UTF_SIZE_ERROR   4, 2, "%s:invalid byte count per code point; value was %d\n"
+#define MSG_UTF_FRAME_ERROR  4, 3, "%s:%u:UTF-%u%cE input framing error\n"
+#define MSG_UTF_CODESET      4, 4, "%s:input codeset identified as %s; conflicts with ...\n"
 /* !
  * !$ end of file
  */
-#endif /* !defined( GCMSGS_H ): $RCSfile$Revision: 1.2 $: end of file */
+#endif /* !defined( GCMSGS_H ): $RCSfile$Revision: 1.3 $: end of file */
