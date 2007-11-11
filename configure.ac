@@ -90,8 +90,11 @@
   MINGW_AC_CHECK_HEADER([REPLACEMENT_HEADERS], [nl_types.h])
   MINGW_AC_CHECK_HEADER([REPLACEMENT_HEADERS], [langinfo.h])
 
-# For a native Win32 build, we need the MinGW locale extensions.
+# Building for a native Win32 host, we need the `windows.h' header,
+# (which is not required for a cross-hosted tool chain build), and
+# also the MinGW locale extensions.
 #
+  AC_CHECK_HEADERS([windows.h])
   MINGW_AC_LC_EXTENSIONS([LOCAL_HEADERS])
 
 # Object modules required to build the `gencat' executable.
@@ -120,4 +123,4 @@
   AC_CONFIG_FILES([Makefile])
   AC_OUTPUT
 #
-# $RCSfile$Revision: 1.1.1.1 $: end of file
+# $RCSfile$Revision: 1.2 $: end of file
