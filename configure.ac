@@ -48,6 +48,10 @@
   AC_PREREQ([2.59])
   AC_INIT(__MINGW_AC_PACKAGE_IDENTIFICATION__)
 
+# Initialise for possible building as a cross-hosted tool kit.
+#
+  CATGETS_AC_CONFIG_TARGET
+
 # Set up to use `config.h', with included package version tags.
 #
   AC_CONFIG_HEADERS([config.h])
@@ -123,4 +127,4 @@
   AC_CONFIG_FILES([Makefile])
   AC_OUTPUT
 #
-# $RCSfile$Revision: 1.2 $: end of file
+# $RCSfile$Revision: 1.3 $: end of file
