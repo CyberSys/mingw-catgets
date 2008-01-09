@@ -3,13 +3,13 @@
  *
  * $Id$
  *
- * Copyright (C) 2006, 2007, Keith Marshall
+ * Copyright (C) 2006, 2007, 2008, Keith Marshall
  *
  * This file implements the message catalogue source code parser, which is
  * used internally by `gencat', to compile message dictionaries.
  *
  * Written by Keith Marshall  <keithmarshall@users.sourceforge.net>
- * Last modification: 22-Sept-2007
+ * Last modification: 08-Jan-2008
  *
  *
  * This is free software.  It is provided AS IS, in the hope that it may
@@ -289,7 +289,7 @@ struct msgdict *mc_source( const char *input )
   /* Get a file descriptor for the input stream ...
    */
   const char *dev_stdin = "/dev/stdin";
-  if( (strcmp( input, "-") == 0) || (strcmp( input, dev_stdin ) == 0) )
+  if( (strcmp( input, "-") == 0) || (strcasecmp( input, dev_stdin ) == 0) )
   {
     /* ... reading from standard input ...
      */
@@ -1265,4 +1265,4 @@ struct msgdict *mc_source( const char *input )
   return head;
 }
 
-/* $RCSfile$Revision: 1.11 $: end of file */
+/* $RCSfile$Revision: 1.12 $: end of file */
