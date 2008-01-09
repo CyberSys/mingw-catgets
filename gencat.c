@@ -8,7 +8,7 @@
  * This file implements the `main' function for the `gencat' program.
  *
  * Written by Keith Marshall  <keithmarshall@users.sourceforge.net>
- * Last modification: 08-Jan-2008
+ * Last modification: 09-Jan-2008
  *
  *
  * This is free software.  It is provided AS IS, in the hope that it may
@@ -149,7 +149,6 @@ int main( int argc, char **argv )
     int ext = strlen( *argv ) - 4;
     if( (ext > 0) && (strcasecmp( *argv + ext, ".exe" ) == 0) )
       *(*argv + ext) = '\0';
-    progname = *argv;
   }
   else
     /* Something went wrong...
@@ -178,6 +177,7 @@ int main( int argc, char **argv )
 	exit( EXIT_SUCCESS );
     }
 
+  progname = *argv;
   cat_index.id = tag;
 
   if( (argc -= optind) > 1 )
@@ -388,4 +388,4 @@ int main( int argc, char **argv )
   return EXIT_SUCCESS;
 }
 
-/* $RCSfile$Revision: 1.3 $: end of file */
+/* $RCSfile$Revision: 1.4 $: end of file */
