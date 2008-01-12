@@ -15,12 +15,12 @@
 #                            Tag              Value
 #                            ---------------  ---------
   MINGW_AC_DEFINE_PACKAGE_ID([BASENAME],      [catgets])
-  MINGW_AC_DEFINE_PACKAGE_ID([VERSION_MAJOR], [0])
-  MINGW_AC_DEFINE_PACKAGE_ID([VERSION_MINOR], [1])
+  MINGW_AC_DEFINE_PACKAGE_ID([VERSION_MAJOR], [1])
+  MINGW_AC_DEFINE_PACKAGE_ID([VERSION_MINOR], [0])
 #
 # PATCHLEVEL is optional; comment/uncomment and adjust as required.
 #
-# MINGW_AC_DEFINE_PACKAGE_ID([PATCHLEVEL],    [3])
+# MINGW_AC_DEFINE_PACKAGE_ID([PATCHLEVEL],    [0])
 #
 # DLL_VERSION is required; installed DLLs will be versioned, by
 # appending a hyphen, the specified tag value, and then the `.dll'
@@ -129,4 +129,4 @@
   AC_CONFIG_FILES([Makefile])
   AC_OUTPUT
 #
-# $RCSfile$Revision: 1.4 $: end of file
+# $RCSfile$Revision: 1.5 $: end of file
